@@ -5,7 +5,7 @@ requires-python = ">=3.12"
 [manifest]
 members = [
     "hylreg-demo-workspace",
-    "hylreg-qt",
+    "hylreg-hub-manager",
 ]
 
 [[package]]
@@ -14,9 +14,9 @@ version = "0.1.0"
 source = { editable = "." }
 
 [[package]]
-name = "hylreg-qt"
+name = "hylreg-hub-manager"
 version = "0.1.0"
-source = { editable = "demo/hylreg-qt" }
+source = { editable = "demo/hylreg_hub_manager" }
 dependencies = [
     { name = "pyqt6" },
 ]
