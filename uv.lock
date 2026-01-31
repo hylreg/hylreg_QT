@@ -2,10 +2,21 @@ version = 1
 revision = 3
 requires-python = ">=3.12"
 
+[manifest]
+members = [
+    "hylreg-demo-workspace",
+    "hylreg-qt",
+]
+
+[[package]]
+name = "hylreg-demo-workspace"
+version = "0.1.0"
+source = { editable = "." }
+
 [[package]]
 name = "hylreg-qt"
 version = "0.1.0"
-source = { editable = "." }
+source = { editable = "demo/hylreg-qt" }
 dependencies = [
     { name = "pyqt6" },
 ]

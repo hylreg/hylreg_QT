@@ -1,0 +1,19 @@
+[project]
+name = "hylreg_hub_manager"
+version = "0.1.0"
+description = "Qt 桌面应用：Git Submodule 中心仓库（hylreg hub）管理与可视化"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "PyQt6>=6.6.0",
+]
+
+[project.scripts]
+hylreg_hub_manager = "main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app", "core"]

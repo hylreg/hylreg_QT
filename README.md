@@ -1,26 +1,38 @@
-# hylreg_QT
+# hylreg Demo 工作区
 
-基于 Qt 的桌面应用，用于 [hylreg_hub](https://github.com/.../hylreg_hub) 式 Git Submodule 中心仓库的管理与可视化。
+本仓库为 **demo** 工作区，内含多个子项目。使用 [uv](https://docs.astral.sh/uv/) 管理依赖与工作区。
+
+## 子项目
+
+| 路径 | 说明 |
+|------|------|
+| [demo/hylreg_hub_manager](demo/hylreg_hub_manager/) | Qt 桌面应用：Git Submodule 中心仓库（hylreg hub）管理与可视化 |
 
 ## 环境
 
-- Python 3.12
-- uv 管理依赖
+- Python 3.12+
+- uv
 
-## 安装与运行
+## 使用
+
+**推荐**：进入子项目目录后再安装与运行。
 
 ```bash
+# 进入子项目
+cd demo/hylreg_hub_manager
+
+# 安装依赖并运行
 uv sync
 uv run python main.py
 # 或
-uv run hylreg-qt
+uv run hylreg_hub_manager
 ```
 
-## 功能
+若在仓库根目录操作，可先同步工作区依赖，再指定包运行：
 
-- 打开本地 hub 仓库根目录
-- 查看子模块列表（路径、URL、Commit、状态）
-- 添加 / 初始化 / 更新到记录版本 / 更新到远端 / 删除子模块
-- 底部输出面板显示 git 命令及结果
+```bash
+uv sync
+uv run --package hylreg_hub_manager hylreg_hub_manager
+```
 
-详见 [docs/技术设计文档.md](docs/技术设计文档.md)。
+各子项目详细说明见其目录下的 `README.md`。
